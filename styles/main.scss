@@ -57,3 +57,11 @@ body {
     // spaces
     padding-block: 2rem;
 }
+.calculator {
+    background-color: $White;
+    @include rounded-top-edges(1.5em);
+    @include arrange-children-vertically;
+
+    // spaces
+    padding: 2em;
+}
