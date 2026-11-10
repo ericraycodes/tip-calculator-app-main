@@ -57,6 +57,7 @@ body {
 // -----    MAIN, APP CONTAINER
 .main {
     font-family: "Space Mono", 'Courier New', Courier, monospace;
+    font-weight: 700;
     background-color: $Grey-200;
 }
 // HEADING
@@ -86,7 +87,6 @@ body {
     @include arrange-children-vertically;
 
     .label {
-        font-weight: 700;
         color: $Grey-500;
     }
     .input {
@@ -95,7 +95,6 @@ body {
 
         // typography
         font-size: $font-size-inputs;
-        font-weight: 700;
         color: $Green-900;
         text-align: right;
         

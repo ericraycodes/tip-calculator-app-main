@@ -21,6 +21,7 @@ body {
 
 .main {
   font-family: "Space Mono", "Courier New", Courier, monospace;
+  font-weight: 700;
   background-color: hsl(185deg, 41%, 84%);
 }
 
@@ -48,13 +49,11 @@ body {
   flex-direction: column;
 }
 .bill .label {
-  font-weight: 700;
   color: hsl(186deg, 14%, 43%);
 }
 .bill .input {
   all: unset;
   font-size: 1.5rem;
-  font-weight: 700;
   color: hsl(183deg, 100%, 15%);
   text-align: right;
   background-color: hsl(189deg, 47%, 97%);
