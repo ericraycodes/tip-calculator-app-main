@@ -11,3 +11,13 @@ body {
   font-family: "Space Mono", "Courier New", Courier, monospace;
   background-color: hsl(185deg, 41%, 84%);
 }
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
+  letter-spacing: 0.5em;
+  color: hsl(183deg, 100%, 15%);
+  padding-block: 2rem;
+}

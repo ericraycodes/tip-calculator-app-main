@@ -38,3 +38,15 @@ body {
     font-family: "Space Mono", 'Courier New', Courier, monospace;
     background-color: $Grey-200;
 }
+// HEADING
+.heading {
+    @include arrange-children-vertically-center;
+
+    // typography
+    font-size: 1.5em;
+    letter-spacing: 0.5em;
+    color: $Green-900;
+
+    // spaces
+    padding-block: 2rem;
+}
