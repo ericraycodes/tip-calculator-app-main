@@ -82,8 +82,8 @@ body {
     // spaces
     padding: 2em;
 }
-// BILL
-.bill {
+// INPUT NUMBER FIELDS: BILL & NUMBER OF PEOPLE
+.input-number {
     @include arrange-children-vertically;
 
     .label {

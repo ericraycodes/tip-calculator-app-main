@@ -44,14 +44,14 @@ body {
   padding: 2em;
 }
 
-.bill {
+.input-number {
   display: flex;
   flex-direction: column;
 }
-.bill .label {
+.input-number .label {
   color: hsl(186deg, 14%, 43%);
 }
-.bill .input {
+.input-number .input {
   all: unset;
   font-size: 1.5rem;
   color: hsl(183deg, 100%, 15%);
@@ -60,15 +60,15 @@ body {
   border-radius: 0.25rem;
   padding: 0.5em 1em;
 }
-.bill .input::-moz-placeholder {
+.input-number .input::-moz-placeholder {
   text-align: right;
   color: hsl(184deg, 14%, 56%);
 }
-.bill .input:-ms-input-placeholder {
+.input-number .input:-ms-input-placeholder {
   text-align: right;
   color: hsl(184deg, 14%, 56%);
 }
-.bill .input::placeholder {
+.input-number .input::placeholder {
   text-align: right;
   color: hsl(184deg, 14%, 56%);
 }
