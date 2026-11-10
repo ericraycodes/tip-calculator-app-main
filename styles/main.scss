@@ -18,6 +18,10 @@ $font-size-inputs: calc((24/16)*1rem);
     flex-direction: column;
     align-items: center;
 }
+@mixin rounded-top-edges($value) {
+    border-top-left-radius: $value;
+    border-top-right-radius: $value;
+}
 
 
 // INITIAL RULES
