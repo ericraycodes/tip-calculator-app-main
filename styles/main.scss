@@ -70,4 +70,9 @@ body {
 // BILL
 .bill {
     @include arrange-children-vertically;
+
+    .label {
+        font-weight: 700;
+        color: $Grey-500;
+    }
 }
