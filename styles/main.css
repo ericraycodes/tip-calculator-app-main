@@ -30,3 +30,8 @@ body {
   flex-direction: column;
   padding: 2em;
 }
+
+.bill {
+  display: flex;
+  flex-direction: column;
+}

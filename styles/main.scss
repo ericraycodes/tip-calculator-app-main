@@ -67,3 +67,7 @@ body {
     // spaces
     padding: 2em;
 }
+// BILL
+.bill {
+    @include arrange-children-vertically;
+}
