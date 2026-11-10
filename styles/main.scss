@@ -12,6 +12,13 @@ $White: hsl(0, 100%, 100%);
 $font-size-inputs: calc((24/16)*1rem);
 
 
+// ##   MIXINS
+@mixin arrange-children-vertically {
+    display: flex;
+    flex-direction: column;
+}
+
+
 // INITIAL RULES
 * {
     box-sizing: border-box;
