@@ -89,4 +89,23 @@ body {
         font-weight: 700;
         color: $Grey-500;
     }
+    .input {
+        // remove native styles
+        all: unset;
+
+        // typography
+        font-size: $font-size-inputs;
+        font-weight: 700;
+        color: $Green-900;
+        text-align: right;
+        
+        // styles
+        background-color: $Grey-50;
+        border-radius: 0.25rem;
+        padding: 0.5em 1em;
+    }
+    .input::placeholder {
+        text-align: right;
+        color: $Grey-400;
+    }
 }
