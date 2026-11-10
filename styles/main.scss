@@ -10,3 +10,10 @@ $Grey-50: hsl(189, 47%, 97%);
 $White: hsl(0, 100%, 100%);
 // input font size 24px
 $font-size-inputs: calc((24/16)*1rem);
+
+
+// INITIAL RULES
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
