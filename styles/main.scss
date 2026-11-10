@@ -17,3 +17,10 @@ $font-size-inputs: calc((24/16)*1rem);
     box-sizing: border-box;
     margin: 0;
 }
+
+
+// -----     MOBILE DESIGN: 320px
+body {
+    // 320px
+    min-width: 20rem;
+}
