@@ -6,3 +6,8 @@
 body {
   min-width: 20rem;
 }
+
+.main {
+  font-family: "Space Mono", "Courier New", Courier, monospace;
+  background-color: hsl(185deg, 41%, 84%);
+}
