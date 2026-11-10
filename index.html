@@ -1,44 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  Bill
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 0.6875rem;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1><span>SPLI</span><span>TTER</span></h1>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <form>
+        <label>
+          <span>Bill</span>
+          <input type="number" />
+        </label>
 
-  Number of People
+        <fieldset>
+          <legend>Select Tip %</legend>
 
-  Tip Amount
-  / person
+          <label>
+            <span>5%</span>
+            <input name="tip" type="radio" />
+          </label>
+          <label>
+            <span>10%</span>
+            <input name="tip" type="radio" />
+          </label>
+          <label>
+            <span>15%</span>
+            <input name="tip" type="radio" />
+          </label>
+          <label>
+            <span>25%</span>
+            <input name="tip" type="radio" />
+          </label>
+          <label>
+            <span>50%</span>
+            <input name="tip" type="radio" />
+          </label>
+          <label>
+            <span>Custom</span>
+            <input name="tip" type="radio" />
+            <input type="number" />
+          </label>
+        </fieldset>
 
-  Total
-  / person
+        <label>
+          <span>Number of People</span>
+          <input type="number" />
+        </label>
 
-  Reset
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+        <section>
+          <div>
+            <p>
+              <strong>Tip Amount</strong>
+              <span>/ person</span>
+            </p>
+            <output></output>
+          </div>
+
+          <div>
+            <p>
+              <strong>Total</strong>
+              <span>/ person</span>
+            </p>
+            <output></output>
+          </div>
+
+          <button type="submit">Reset</button>
+        </section>
+      </form>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </footer>
+  </body>
 </html>
