@@ -47,20 +47,6 @@ $font-size-inputs: calc((24/16)*1rem);
 }
 
 
-// -----    Remove the arrow buttons in <input type="number">
-// Chrome, Safari, Edge, Opera
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-// Firefox
-input[type="number"] {
-    -moz-appearance: textfield;
-    appearance: textfield;
-}
-
-
 // -----     MOBILE DESIGN: 320px
 body {
     // 320px
