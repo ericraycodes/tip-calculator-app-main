@@ -93,3 +93,6 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+.select-tip .label {
+  color: hsl(186deg, 14%, 43%);
+}

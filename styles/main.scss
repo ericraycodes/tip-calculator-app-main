@@ -123,4 +123,8 @@ body {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    .label {
+        color: $Grey-500;
+    }
 }
