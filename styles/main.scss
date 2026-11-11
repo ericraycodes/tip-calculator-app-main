@@ -135,10 +135,16 @@ body {
         font-size: $font-size-inputs;
         text-align: center;
         color: $White;
+
+        // anchor radio input's position
+        position: relative;
     }
     input[type="radio"] {
         -webkit-appearance: none;
                 appearance: none;
+        
+        // not take up space
+        position: absolute;
     }
 }
 
