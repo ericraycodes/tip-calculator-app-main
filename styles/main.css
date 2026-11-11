@@ -117,6 +117,14 @@ body {
   position: absolute;
 }
 
+.result {
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
 .no-display {
   display: none;
 }

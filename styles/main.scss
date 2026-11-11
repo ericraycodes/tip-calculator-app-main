@@ -151,6 +151,13 @@ body {
         position: absolute;
     }
 }
+// CALCULATION RESULT
+.result {
+    background-color: $Green-900;
+    border-radius: 1rem;
+    padding: 2rem;
+    @include arrange-children-vertically;
+}
 
 // -----    PRE-STYLED CLASSES
 .no-display {
