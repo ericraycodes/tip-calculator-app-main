@@ -136,4 +136,8 @@ body {
         text-align: center;
         color: $White;
     }
+    input[type="radio"] {
+        -webkit-appearance: none;
+                appearance: none;
+    }
 }

@@ -105,3 +105,8 @@ body {
   text-align: center;
   color: hsl(0deg, 100%, 100%);
 }
+.select-tip input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
