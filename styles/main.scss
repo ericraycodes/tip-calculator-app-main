@@ -180,6 +180,17 @@ body {
             content: "$";
         }
     }
+    .reset {
+        all: unset;
+
+        background-color: $Green-400;
+        color: $Green-900;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        text-align: center;
+        padding: 0.5rem;
+        border-radius: 0.25em;
+    }
 }
 
 // -----    PRE-STYLED CLASSES
