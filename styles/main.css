@@ -99,6 +99,10 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 1em;
 }
+.select-tip .label {
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+}
 .select-tip .tip {
   background-color: hsl(183deg, 100%, 15%);
   border-radius: 0.25em;

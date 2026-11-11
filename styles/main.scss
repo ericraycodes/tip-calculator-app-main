@@ -128,6 +128,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
 
+    .label {
+        margin-block-end: 1rem;
+    }
     .tip {
         background-color: $Green-900;
         border-radius: 0.25em;
