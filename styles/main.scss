@@ -124,4 +124,16 @@ body {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+
+    .tip {
+        background-color: $Green-900;
+        border-radius: 0.25em;
+        padding: 0.25rem 1rem;
+
+        // typo
+        font-size: $font-size-inputs;
+        text-align: center;
+        color: $White;
+    }
 }

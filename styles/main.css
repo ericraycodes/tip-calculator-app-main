@@ -95,4 +95,13 @@ body {
   all: unset;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+.select-tip .tip {
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 0.25em;
+  padding: 0.25rem 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: hsl(0deg, 100%, 100%);
 }
