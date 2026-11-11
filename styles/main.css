@@ -123,6 +123,28 @@ body {
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
+}
+.result .amount-per-person {
+  display: flex;
+  justify-content: space-between;
+  color: hsl(184deg, 14%, 56%);
+}
+.result .amount-per-person span {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75em;
+}
+.result .amount-per-person strong {
+  color: hsl(0deg, 100%, 100%);
+  font-size: 1.125em;
+}
+.result .amount-per-person output {
+  color: hsl(172deg, 67%, 45%);
+  font-size: 1.875rem;
+}
+.result .amount-per-person output::before {
+  content: "$";
 }
 
 .no-display {

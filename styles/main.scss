@@ -157,6 +157,29 @@ body {
     border-radius: 1rem;
     padding: 2rem;
     @include arrange-children-vertically;
+    gap: 1.5rem;
+
+    .amount-per-person {
+        display: flex;
+        justify-content: space-between;
+        color: $Grey-400;
+
+        span {
+            @include arrange-children-vertically;
+            font-size: 0.75em;
+        }
+        strong {
+            color: $White;
+            font-size: 1.125em;
+        }
+        output {
+            color: $Green-400;
+            font-size: $font-size-inputs*1.25;
+        }
+        output::before {
+            content: "$";
+        }
+    }
 }
 
 // -----    PRE-STYLED CLASSES
