@@ -87,3 +87,8 @@ body {
   text-align: right;
   color: hsl(184deg, 14%, 56%);
 }
+
+.select-tip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
