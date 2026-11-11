@@ -81,13 +81,14 @@ body {
     // spaces
     padding: 2em;
 }
+.label {
+    color: $Grey-500;
+}
 // INPUT NUMBER FIELDS: BILL & NUMBER OF PEOPLE
 .input-number {
     @include arrange-children-vertically;
 
     .label {
-        color: $Grey-500;
-
         // anchor <.label::before> position
         position: relative;
     }
@@ -123,8 +124,4 @@ body {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
-    .label {
-        color: $Grey-500;
-    }
 }

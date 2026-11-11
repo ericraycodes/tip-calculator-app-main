@@ -32,12 +32,15 @@ body {
   padding: 2em;
 }
 
+.label {
+  color: hsl(186deg, 14%, 43%);
+}
+
 .input-number {
   display: flex;
   flex-direction: column;
 }
 .input-number .label {
-  color: hsl(186deg, 14%, 43%);
   position: relative;
 }
 .input-number .label.bill::before {
@@ -92,7 +95,4 @@ body {
   all: unset;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
-.select-tip .label {
-  color: hsl(186deg, 14%, 43%);
 }
