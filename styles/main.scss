@@ -88,6 +88,7 @@ body {
 // INPUT NUMBER FIELDS: BILL & NUMBER OF PEOPLE
 .input-number {
     @include arrange-children-vertically;
+    gap: 0.5rem;
 
     .label {
         // anchor <.label::before> position
