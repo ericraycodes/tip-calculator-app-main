@@ -89,6 +89,7 @@ body {
 }
 
 .select-tip {
+  all: unset;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }

@@ -118,6 +118,9 @@ body {
 }
 // PERCENTAGE OF TIP SELECTION
 .select-tip {
+    // remove native styles
+    all: unset;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
