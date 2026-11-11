@@ -35,7 +35,7 @@ $font-size-inputs: calc((24/16)*1rem);
     width: 1rem;
     height: 1rem;
     position: absolute;
-    top: 2.375rem;
+    top: 2.375rem + $gap;
     left: 1rem;
 }
 
@@ -95,10 +95,10 @@ body {
         position: relative;
     }
     .label.bill::before {
-        @include numeric-field-icon ("../images/icon-dollar.svg", 0);
+        @include numeric-field-icon ("../images/icon-dollar.svg", 0.5rem);
     }
     .label.number-of-people::before {
-        @include numeric-field-icon ("../images/icon-person.svg", 0);
+        @include numeric-field-icon ("../images/icon-person.svg", 0.5rem);
     }
     .input {
         // remove native styles
