@@ -106,6 +106,10 @@ body {
   color: hsl(0deg, 100%, 100%);
   position: relative;
 }
+.select-tip .custom {
+  background-color: hsl(189deg, 47%, 97%);
+  color: hsl(186deg, 14%, 43%);
+}
 .select-tip input[type=radio] {
   -webkit-appearance: none;
   -moz-appearance: none;

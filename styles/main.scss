@@ -139,6 +139,10 @@ body {
         // anchor radio input's position
         position: relative;
     }
+    .custom {
+        background-color: $Grey-50;
+        color: $Grey-500;
+    }
     input[type="radio"] {
         -webkit-appearance: none;
                 appearance: none;
