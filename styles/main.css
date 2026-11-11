@@ -50,6 +50,33 @@ body {
 }
 .input-number .label {
   color: hsl(186deg, 14%, 43%);
+  position: relative;
+}
+.input-number .label.bill::before {
+  content: "";
+  display: inline-block;
+  background-image: url("../images/icon-dollar.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 2.375rem;
+  left: 1rem;
+}
+.input-number .label.number-of-people::before {
+  content: "";
+  display: inline-block;
+  background-image: url("../images/icon-person.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 2.375rem;
+  left: 1rem;
 }
 .input-number .input {
   all: unset;

@@ -25,6 +25,19 @@ $font-size-inputs: calc((24/16)*1rem);
     border-top-left-radius: $value;
     border-top-right-radius: $value;
 }
+@mixin numeric-field-icon ($url, $gap) {
+    content: "";
+    display: inline-block;
+    background-image: url($url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 2.375rem;
+    left: 1rem;
+}
 
 
 // INITIAL RULES
@@ -88,6 +101,15 @@ body {
 
     .label {
         color: $Grey-500;
+
+        // anchor <.label::before> position
+        position: relative;
+    }
+    .label.bill::before {
+        @include numeric-field-icon ("../images/icon-dollar.svg", 0);
+    }
+    .label.number-of-people::before {
+        @include numeric-field-icon ("../images/icon-person.svg", 0);
     }
     .input {
         // remove native styles
