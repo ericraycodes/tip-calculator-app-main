@@ -210,6 +210,16 @@ body {
 
         @include typography(1.25rem, $Green-900, center);
         text-transform: uppercase;
+
+        $lightgreen-1: hsl(172, 67%, 70%);
+        // on hover
+        &:hover {
+            background-color: $lightgreen-1;
+            cursor: pointer;
+        }
+        &:focus-visible {
+            outline: 0.175rem solid orangered;
+        }
     }
 }
 

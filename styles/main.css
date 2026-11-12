@@ -201,6 +201,13 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
+.result .reset:hover {
+  background-color: hsl(172deg, 67%, 70%);
+  cursor: pointer;
+}
+.result .reset:focus-visible {
+  outline: 0.175rem solid orangered;
+}
 
 .no-display {
   display: none;
