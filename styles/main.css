@@ -103,6 +103,18 @@ body {
   text-align: right;
 }
 
+.invalid .label::after {
+  content: "invalid";
+  position: absolute;
+  font-size: 0.75em;
+  color: red;
+  bottom: 0;
+  right: 0;
+}
+.invalid .input {
+  outline: 0.125rem solid red;
+}
+
 .select-tip {
   all: unset;
   display: grid;

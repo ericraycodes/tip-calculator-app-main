@@ -120,8 +120,20 @@ body {
     .input::placeholder {
         @include typography(null, $Grey-400, right);
     }
-
-    
+}
+// invalid input style
+.invalid {
+    .label::after {
+        content: "invalid";
+        position: absolute;
+        font-size: 0.75em;
+        color: red;
+        bottom: 0;
+        right: 0;
+    }
+    .input {
+        outline: 0.125rem solid red;
+    }
 }
 // PERCENTAGE OF TIP SELECTION
 .select-tip {
