@@ -134,6 +134,13 @@ body {
   text-align: center;
   position: relative;
 }
+.select-tip .tip:hover {
+  background-color: hsl(172deg, 67%, 45%);
+  cursor: pointer;
+}
+.select-tip .tip:hover span {
+  color: hsl(183deg, 100%, 15%);
+}
 .select-tip .custom {
   background-color: hsl(189deg, 47%, 97%);
   color: hsl(186deg, 14%, 43%);

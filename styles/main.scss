@@ -107,7 +107,7 @@ body {
 
         @include box($Grey-50, 0.25rem, 0.25rem 1rem);
         @include typography ($font-size-inputs, $Green-900, right);
-        
+
         // on hover, on focus
         &:hover {
             outline: 0.125rem solid $Green-400;
@@ -153,6 +153,16 @@ body {
 
         // anchor radio input's position
         position: relative;
+
+        // on hover
+        &:hover {
+            background-color: $Green-400;
+            cursor: pointer;
+
+            span {
+                color: $Green-900;
+            }
+        }
     }
     .custom {
         background-color: $Grey-50;
