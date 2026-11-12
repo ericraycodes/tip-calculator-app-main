@@ -10,6 +10,8 @@ $Grey-50: hsl(189, 47%, 97%);
 $White: hsl(0, 100%, 100%);
 // input font size 24px
 $font-size-inputs: calc((24/16)*1rem);
+// other colors
+$lightgreen-1: hsl(172, 67%, 70%);
 
 
 // ##   MIXINS
@@ -211,7 +213,6 @@ body {
         @include typography(1.25rem, $Green-900, center);
         text-transform: uppercase;
 
-        $lightgreen-1: hsl(172, 67%, 70%);
         // on hover
         &:hover {
             background-color: $lightgreen-1;
