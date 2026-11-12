@@ -109,8 +109,7 @@ body {
         @include typography ($font-size-inputs, $Green-900, right);
     }
     .input::placeholder {
-        text-align: right;
-        color: $Grey-400;
+        @include typography(null, $Grey-400, right);
     }
 }
 // PERCENTAGE OF TIP SELECTION
