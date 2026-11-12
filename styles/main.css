@@ -138,6 +138,7 @@ body {
 .result .amount-per-person {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: hsl(184deg, 14%, 56%);
 }
 .result .amount-per-person span {

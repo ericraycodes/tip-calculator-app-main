@@ -152,6 +152,7 @@ body {
     .amount-per-person {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         color: $Grey-400;
 
         span {
