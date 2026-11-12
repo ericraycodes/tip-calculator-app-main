@@ -66,11 +66,9 @@ body {
 .heading {
     @include arrange-children-vertically (center);
 
-    // typography
-    font-size: 1.5em;
+    @include typography(1.5rem, $Green-900, );
     letter-spacing: 0.5em;
-    color: $Green-900;
-    
+
     // spaces
     padding-block: 2rem;
 }
@@ -105,10 +103,7 @@ body {
         // remove native styles
         all: unset;
 
-        // typography
-        font-size: $font-size-inputs;
-        color: $Green-900;
-        text-align: right;
+        @include typography ($font-size-inputs, $Green-900, right);
         
         // styles
         background-color: $Grey-50;
@@ -137,10 +132,7 @@ body {
         border-radius: 0.25em;
         padding: 0.25rem 1rem;
 
-        // typo
-        font-size: $font-size-inputs;
-        text-align: center;
-        color: $White;
+        @include typography($font-size-inputs, $White, center);
 
         // anchor radio input's position
         position: relative;
@@ -174,12 +166,10 @@ body {
             font-size: 0.75em;
         }
         strong {
-            color: $White;
-            font-size: 1.125em;
+            @include typography(1.125em, $White, );
         }
         output {
-            color: $Green-400;
-            font-size: $font-size-inputs*1.25;
+            @include typography($font-size-inputs*1.25, $Green-400, );
         }
         output::before {
             content: "$";
@@ -189,12 +179,11 @@ body {
         all: unset;
 
         background-color: $Green-400;
-        color: $Green-900;
-        text-transform: uppercase;
-        font-size: 1.25rem;
-        text-align: center;
         padding: 0.5rem;
         border-radius: 0.25em;
+
+        @include typography(1.25rem, $Green-900, center);
+        text-transform: uppercase;
     }
 }
 
