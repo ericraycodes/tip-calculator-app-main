@@ -16,6 +16,8 @@ body {
 .heading {
   display: flex;
   flex-direction: column;
+  align-items: normal;
+  gap: 0;
   align-items: center;
   font-size: 1.5em;
   letter-spacing: 0.5em;
@@ -29,6 +31,8 @@ body {
   border-top-right-radius: 1.5em;
   display: flex;
   flex-direction: column;
+  align-items: normal;
+  gap: 0;
   gap: 2rem;
   padding: 2em;
 }
@@ -40,6 +44,8 @@ body {
 .input-number {
   display: flex;
   flex-direction: column;
+  align-items: normal;
+  gap: 0;
   gap: 0.5rem;
 }
 .input-number .label {
@@ -129,6 +135,8 @@ body {
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  align-items: normal;
+  gap: 0;
   gap: 1.5rem;
 }
 .result .amount-per-person {
@@ -139,6 +147,8 @@ body {
 .result .amount-per-person span {
   display: flex;
   flex-direction: column;
+  align-items: normal;
+  gap: 0;
   font-size: 0.75em;
 }
 .result .amount-per-person strong {

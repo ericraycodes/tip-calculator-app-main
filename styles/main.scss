@@ -13,13 +13,11 @@ $font-size-inputs: calc((24/16)*1rem);
 
 
 // ##   MIXINS
-@mixin arrange-children-vertically {
+@mixin arrange-children-vertically ($align-items: normal, $gap: 0) {
     display: flex;
     flex-direction: column;
-}
-@mixin arrange-children-vertically-center {
-    @include arrange-children-vertically;
-    align-items: center;
+    align-items: $align-items;
+    gap: $gap;
 }
 @mixin rounded-top-edges($value) {
     border-top-left-radius: $value;
