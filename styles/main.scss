@@ -163,6 +163,10 @@ body {
                 color: $Green-900;
             }
         }
+        &:has(.radio-button:checked) {
+            background-color: $Green-400;           
+            span { color: $Green-900;}
+        }
     }
     .custom {
         background-color: $Grey-50;

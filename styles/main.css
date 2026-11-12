@@ -141,6 +141,12 @@ body {
 .select-tip .tip:hover span {
   color: hsl(183deg, 100%, 15%);
 }
+.select-tip .tip:has(.radio-button:checked) {
+  background-color: hsl(172deg, 67%, 45%);
+}
+.select-tip .tip:has(.radio-button:checked) span {
+  color: hsl(183deg, 100%, 15%);
+}
 .select-tip .custom {
   background-color: hsl(189deg, 47%, 97%);
   color: hsl(186deg, 14%, 43%);
