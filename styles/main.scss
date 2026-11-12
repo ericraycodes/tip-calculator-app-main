@@ -24,6 +24,11 @@ $font-size-inputs: calc((24/16)*1rem);
     color: $color;
     text-align: $align;
 }
+@mixin box ($bg-c: null, $b-r: null, $p: null) {
+    background-color: $bg-c;
+    border-radius: $b-r;
+    padding: $p;
+}
 @mixin rounded-top-edges($value) {
     border-top-left-radius: $value;
     border-top-right-radius: $value;
