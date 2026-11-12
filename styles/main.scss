@@ -80,12 +80,9 @@ body {
 
 // -----    CALCULATOR
 .calculator {
-    background-color: $White;
+    @include box ($White, null, 2rem);
     @include rounded-top-edges(1.5em);
     @include arrange-children-vertically (normal, 2rem);
-
-    // spaces
-    padding: 2em;
 }
 .label {
     color: $Grey-500;
@@ -108,12 +105,8 @@ body {
         // remove native styles
         all: unset;
 
+        @include box($Grey-50, 0.25rem, 0.25rem 1rem);
         @include typography ($font-size-inputs, $Green-900, right);
-        
-        // styles
-        background-color: $Grey-50;
-        border-radius: 0.25rem;
-        padding: 0.25rem 1rem;
     }
     .input::placeholder {
         text-align: right;
@@ -133,10 +126,7 @@ body {
         margin-block-end: 1rem;
     }
     .tip {
-        background-color: $Green-900;
-        border-radius: 0.25em;
-        padding: 0.25rem 1rem;
-
+        @include box ($Green-900, 0.25rem, 0.25rem 1rem);
         @include typography($font-size-inputs, $White, center);
 
         // anchor radio input's position
@@ -156,9 +146,7 @@ body {
 }
 // CALCULATION RESULT
 .result {
-    background-color: $Green-900;
-    border-radius: 1rem;
-    padding: 2rem;
+    @include box ($Green-900, 1rem, 2rem);
     @include arrange-children-vertically (normal, 1.5rem);
 
     .amount-per-person {
@@ -182,10 +170,7 @@ body {
     }
     .reset {
         all: unset;
-
-        background-color: $Green-400;
-        padding: 0.5rem;
-        border-radius: 0.25em;
+        @include box($Green-400, 0.25rem, 0.375rem);
 
         @include typography(1.25rem, $Green-900, center);
         text-transform: uppercase;
