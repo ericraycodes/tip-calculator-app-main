@@ -83,6 +83,13 @@ body {
   color: hsl(183deg, 100%, 15%);
   text-align: right;
 }
+.input-number .input:hover {
+  outline: 0.125rem solid hsl(172deg, 67%, 45%);
+  cursor: pointer;
+}
+.input-number .input:focus-visible {
+  outline: 0.125rem solid hsl(172deg, 67%, 45%);
+}
 .input-number .input::-moz-placeholder {
   color: hsl(184deg, 14%, 56%);
   text-align: right;

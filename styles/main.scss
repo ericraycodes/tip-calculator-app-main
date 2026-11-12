@@ -107,10 +107,21 @@ body {
 
         @include box($Grey-50, 0.25rem, 0.25rem 1rem);
         @include typography ($font-size-inputs, $Green-900, right);
+        
+        // on hover, on focus
+        &:hover {
+            outline: 0.125rem solid $Green-400;
+            cursor: pointer;
+        }
+        &:focus-visible {
+            outline: 0.125rem solid $Green-400;
+        }
     }
     .input::placeholder {
         @include typography(null, $Grey-400, right);
     }
+
+    
 }
 // PERCENTAGE OF TIP SELECTION
 .select-tip {
