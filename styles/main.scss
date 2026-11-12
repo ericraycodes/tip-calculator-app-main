@@ -153,11 +153,10 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: $Grey-400;
+        @include typography(0.75em, $Grey-400, );
 
         span {
             @include arrange-children-vertically;
-            font-size: 0.75em;
         }
         strong {
             @include typography(1.125em, $White, );
