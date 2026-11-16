@@ -63,8 +63,8 @@ body {
     min-width: 20rem;
 }
 
-// -----    MAIN, APP CONTAINER
-.main {
+// -----    CALCULATOR, APP CONTAINER
+.calculator {
     font-family: "Space Mono", 'Courier New', Courier, monospace;
     font-weight: 700;
     background-color: $Grey-200;
@@ -81,7 +81,7 @@ body {
 }
 
 // -----    CALCULATOR
-.calculator {
+.input-controls {
     @include box ($White, null, 2rem);
     @include rounded-top-edges(1.5em);
     @include arrange-children-vertically (normal, 2rem);
@@ -212,7 +212,7 @@ input {
     }
 }
 // CALCULATION RESULT
-.result {
+.calculation-result {
     @include box ($Green-900, 1rem, 2rem);
     @include arrange-children-vertically (normal, 1.5rem);
 
