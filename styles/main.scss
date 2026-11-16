@@ -90,6 +90,10 @@ body {
     color: $Grey-500;
 }
 // INPUT NUMBER FIELDS: BILL & NUMBER OF PEOPLE
+input {
+    // remove native styles
+    all: unset;
+}
 .input-number {
     @include arrange-children-vertically (normal, 0.5rem);
 
@@ -105,7 +109,7 @@ body {
     }
     .input {
         // remove native styles
-        all: unset;
+        // all: unset;
 
         @include box($Grey-50, 0.25rem, 0.25rem 1rem);
         @include typography ($font-size-inputs, $Green-900, right);
@@ -170,6 +174,34 @@ body {
     .custom {
         background-color: $Grey-50;
         color: $Grey-500;
+
+        // input element takes up all space
+        padding: unset;
+        // keep the round edges
+        overflow: hidden;
+
+
+        &:has(.radio-button:checked),
+        &:hover,
+        &:focus-visible {
+            background-color: $Grey-50;
+            outline: 0.125rem solid $Green-400;
+        }
+    }
+    .custom-tip-input {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding-inline: 1rem;
+        color: $Green-900;
+
+        &:focus-visible {
+            background-color: $Grey-50;
+            outline: 0.125rem solid $Green-400;
+        }
+    }
+    .custom-tip-input::placeholder {
+        color: $Grey-400;
     }
     input[type="radio"] {
         -webkit-appearance: none;
