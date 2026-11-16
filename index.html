@@ -29,17 +29,13 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <main class="main">
+    <main class="calculator">
       <h1 class="heading"><span>SPLI</span><span>TTER</span></h1>
 
-      <form class="calculator">
+      <section class="input-controls">
         <label class="input-number invalid">
           <span class="label bill">Bill</span>
-          <input
-            class="input"
-            type="text"
-            placeholder="0"
-          />
+          <input class="input" type="text" placeholder="0" />
         </label>
 
         <fieldset class="select-tip">
@@ -78,33 +74,29 @@
 
         <label class="input-number invalid">
           <span class="label number-of-people">Number of People</span>
-          <input
-            class="input"
-            type="text"
-            placeholder="0"
-          />
+          <input class="input" type="text" placeholder="0" />
         </label>
+      </section>
 
-        <section class="result">
-            <p class="amount-per-person">
-              <span>
-                <strong>Tip Amount</strong>
-                / person
-              </span>
-              <output>0.00</output>
-            </p>
+      <section class="calculation-result">
+        <p class="amount-per-person">
+          <span>
+            <strong>Tip Amount</strong>
+            / person
+          </span>
+          <output>0.00</output>
+        </p>
 
-            <p class="amount-per-person">
-              <span>
-                <strong>Total</strong>
-                / person
-              </span>
-                <output>0.00</output>
-            </p>
+        <p class="amount-per-person">
+          <span>
+            <strong>Total</strong>
+            / person
+          </span>
+          <output>0.00</output>
+        </p>
 
-          <button class="reset" type="submit">Reset</button>
-        </section>
-      </form>
+        <button class="reset" type="submit">Reset</button>
+      </section>
     </main>
   </body>
 </html>
