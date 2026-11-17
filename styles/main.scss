@@ -99,16 +99,18 @@ input {
     // remove native styles
     all: unset;
 }
-/* Chrome, Safari, Edge, Opera */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-/* Firefox */
+// remove button spinners from input type number in all browsers
 input[type="number"] {
-  -moz-appearance: textfield;
-  appearance: textfield;
+    // Firefox
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+    // Chrome, Safari, Edge, Opera
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 }
 
 .input-number {
