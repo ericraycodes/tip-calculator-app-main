@@ -10,10 +10,16 @@
 
 // ## DOM NODE REFERENCES
 const bill = document.getElementById("bill");
+const numberOfPeople = document.getElementById("number-of-people")
 
 
 // Helper functions
 const isInputValid = (e) => {
+    // validity for number of people input
+    if (e.target.id === "number-of-people") {
+        return /^[0-9]+$/.test(e.target.value);
+    }
+
     const rgx = /^[0-9.]+$/;
     const validity = rgx.test(e.target.value);
     console.log(e.target.value, e.target.id, validity);
@@ -34,3 +40,4 @@ const handleChange = (event) => {
 // -----     1. WAIT FOR USER INPUTS
 // Bill amount <input #bill>
 bill.addEventListener("change", handleChange);
+numberOfPeople.addEventListener("change", handleChange);
