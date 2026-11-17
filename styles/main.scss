@@ -35,6 +35,17 @@ $lightgreen-1: hsl(172, 67%, 70%);
     border-top-left-radius: $value;
     border-top-right-radius: $value;
 }
+@mixin pseudo-element ($con, $dis, $wid, $hei, $pos, $lef, $rig) {
+    content: $con;
+    display: $dis;
+    width: $wid;
+    height: $hei;
+    position: $pos;
+    top: $top;
+    bottom: $bot;
+    left: $lef;
+    right: $rig;
+}
 @mixin numeric-field-icon ($url, $gap) {
     content: "";
     display: inline-block;
