@@ -29,74 +29,84 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <main class="calculator">
+    <main class="app">
       <h1 class="heading"><span>SPLI</span><span>TTER</span></h1>
 
-      <section class="input-controls">
-        <label class="input-number invalid">
-          <span class="label bill">Bill</span>
-          <input class="input" type="text" placeholder="0" />
-        </label>
-
-        <fieldset class="select-tip">
-          <legend class="label">Select Tip %</legend>
-
-          <label class="tip">
-            <span>5%</span>
-            <input class="radio-button" name="tip" type="radio" />
+      <div class="calculator">
+        <section class="input-controls">
+          <label class="input-number invalid">
+            <span class="label bill">Bill</span>
+            <input class="input" type="text" placeholder="0" />
           </label>
 
-          <label class="tip">
-            <span>10%</span>
-            <input class="radio-button" name="tip" type="radio" />
+          <fieldset class="select-tip">
+            <legend class="label">Select Tip %</legend>
+
+            <label class="tip">
+              <span>5%</span>
+              <input class="radio-button" name="tip" type="radio" />
+            </label>
+
+            <label class="tip">
+              <span>10%</span>
+              <input class="radio-button" name="tip" type="radio" />
+            </label>
+
+            <label class="tip">
+              <span>15%</span>
+              <input class="radio-button" name="tip" type="radio" />
+            </label>
+
+            <label class="tip">
+              <span>25%</span>
+              <input class="radio-button" name="tip" type="radio" />
+            </label>
+
+            <label class="tip">
+              <span>50%</span>
+              <input class="radio-button" name="tip" type="radio" />
+            </label>
+
+            <label class="tip custom">
+              <input
+                class="radio-button custom-radio"
+                name="tip"
+                type="radio"
+              />
+              <input
+                class="custom-tip-input"
+                type="text"
+                placeholder="Custom"
+              />
+            </label>
+          </fieldset>
+
+          <label class="input-number invalid">
+            <span class="label number-of-people">Number of People</span>
+            <input class="input" type="text" placeholder="0" />
           </label>
+        </section>
 
-          <label class="tip">
-            <span>15%</span>
-            <input class="radio-button" name="tip" type="radio" />
-          </label>
+        <section class="calculation-result">
+          <p class="amount-per-person">
+            <span>
+              <strong>Tip Amount</strong>
+              / person
+            </span>
+            <output>0.00</output>
+          </p>
 
-          <label class="tip">
-            <span>25%</span>
-            <input class="radio-button" name="tip" type="radio" />
-          </label>
+          <p class="amount-per-person">
+            <span>
+              <strong>Total</strong>
+              / person
+            </span>
+            <output>0.00</output>
+          </p>
 
-          <label class="tip">
-            <span>50%</span>
-            <input class="radio-button" name="tip" type="radio" />
-          </label>
-
-          <label class="tip custom">
-            <input class="radio-button custom-radio" name="tip" type="radio" />
-            <input class="custom-tip-input" type="text" placeholder="Custom" />
-          </label>
-        </fieldset>
-
-        <label class="input-number invalid">
-          <span class="label number-of-people">Number of People</span>
-          <input class="input" type="text" placeholder="0" />
-        </label>
-      </section>
-
-      <section class="calculation-result">
-        <p class="amount-per-person">
-          <span>
-            <strong>Tip Amount</strong>
-            / person
-          </span>
-          <output>0.00</output>
-        </p>
-
-        <p class="amount-per-person">
-          <span>
-            <strong>Total</strong>
-            / person
-          </span>
-          <output>0.00</output>
-        </p>
-
-        <button class="reset" type="submit">Reset</button>
-      </section>
+          <button class="reset" type="submit">Reset</button>
+        </section>
+      </div>
     </main>
   </body>
 </html>
