@@ -20,10 +20,8 @@ const isInputValid = (e) => {
         return /^[0-9]+$/.test(e.target.value);
     }
 
-    const rgx = /^[0-9.]+$/;
-    const validity = rgx.test(e.target.value);
-    console.log(e.target.value, e.target.id, validity);
-    return validity;
+    // validity for bill amount
+    return /^[0-9.]+$/.test(e.target.value);
 };
 
 
