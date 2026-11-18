@@ -5,6 +5,8 @@
  * 2. Validate user inputs.
  * 3. When there is no tip percentage it defaults to zero percent.
  * 4. When the user inputted amounts of zero or less show invalid input indicator.
+ * 
+ * note: computation is by input and not by value changes.
  */
 
 
@@ -28,7 +30,7 @@ const isInputValid = (e) => {
 // ## EVENT HANDLERS
 // Collect numeric input
 const handleChange = (event) => {
-    console.log("on change");
+    console.log(event.target.id, "value:", event.target.value);
 
     // -----    2. VALIDATE INPUTS
     const validity = isInputValid(event);
@@ -37,5 +39,5 @@ const handleChange = (event) => {
 
 // -----     1. WAIT FOR USER INPUTS
 // Bill amount <input #bill>
-bill.addEventListener("change", handleChange);
-numberOfPeople.addEventListener("change", handleChange);
+bill.addEventListener("input", handleChange);
+numberOfPeople.addEventListener("input", handleChange);
