@@ -17,6 +17,7 @@ const customTipLabel = document.getElementById("custom-tip-label");
 const bill = document.getElementById("bill");
 const numberOfPeople = document.getElementById("number-of-people")
 const customTip = document.getElementById("custom-tip");
+const tipSelection = document.getElementById("tip-selection");
 
 
 // Helper functions
@@ -43,6 +44,12 @@ const showOrRemoveInvalidInputIndicator = (inputNode, validity) => {
 
 
 // ## EVENT HANDLERS
+// Collect user-selected tip
+const handleChange = (event) => {
+    console.log(event.target, event.target.checked);
+
+    // if (event.target.name==="tip" && event.target.checked) {}
+};
 // Collect numeric input
 const handleInput = (event) => {
     console.log(event.target.id, typeof event.target.valueAsNumber, event.target.value);
@@ -61,3 +68,4 @@ const handleInput = (event) => {
 bill.addEventListener("input", handleInput);
 numberOfPeople.addEventListener("input", handleInput);
 customTip.addEventListener("input", handleInput);
+tipSelection.addEventListener("change", handleChange);

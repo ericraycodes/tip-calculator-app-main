@@ -152,13 +152,13 @@ input[type="number"] {
         content: "invalid";
         position: absolute;
         font-size: 0.75em;
-        color: darkred;
+        color: red;
         bottom: 0;
         right: 0;
     }
     .input {
-        outline: 0.125rem solid darkred;
-        color: darkred;
+        outline: 0.125rem solid red;
+        color: red;
     }
 }
 // PERCENTAGE OF TIP SELECTION
@@ -208,7 +208,11 @@ input[type="number"] {
             outline: 0.125rem solid $Green-400;
         }
         &.invalid {
-            outline: 0.125rem solid darkred;
+            outline: 0.125rem solid red;
+
+            .custom-tip-input {
+                color: red;
+            }
         }
     }
     .custom-tip-input {
