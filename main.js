@@ -5,17 +5,26 @@
  * 2. Validate user inputs.
  * 3. When there is no tip percentage it defaults to zero percent.
  * 4. When the user inputted amounts of zero or less show invalid input indicator.
+ * 5. Display the calculation result when required input fields are valid.
  * 
- * note: computation is by input and not by value changes.
  */
 
 
 // ## DOM NODE REFERENCES
+const billLabel = document.getElementById("bill-label");
 const bill = document.getElementById("bill");
 const numberOfPeople = document.getElementById("number-of-people")
 
 
 // Helper functions
+const showOrRemoveInvalidIndicator = (e, validity) => {
+    // bill amount input
+    if (e.target.id === "bill") {
+        validity ?
+            billLabel.classList.remove("invalid") :
+            billLabel.classList.add("invalid");
+    }
+};
 const isInputValid = (e) => {
     // validity for number of people input
     if (e.target.id === "number-of-people") {
@@ -30,10 +39,14 @@ const isInputValid = (e) => {
 // ## EVENT HANDLERS
 // Collect numeric input
 const handleChange = (event) => {
-    console.log(event.target.id, "value:", event.target.value);
+    console.log(event.target.id, typeof event.target.value, event.target.value);
 
     // -----    2. VALIDATE INPUTS
-    const validity = isInputValid(event);
+    const inputValidity = isInputValid(event);
+    console.log("validity:", inputValidity);
+
+    // Show error when invalid
+    showOrRemoveInvalidIndicator(event, inputValidity);
 };
 
 
