@@ -20,34 +20,25 @@ const customTip = document.getElementById("custom-tip");
 
 
 // Helper functions
-const showOrRemoveInvalidIndicator = (e, validity) => {
+const showOrRemoveInvalidInputIndicator = (inputNode, validity) => {
     // bill amount input
-    if (e.target.id === "bill") {
+    if (inputNode.id === "bill") {
         validity ?
             billLabel.classList.remove("invalid") :
             billLabel.classList.add("invalid");
     }
     // number of people input
-    else if (e.target.id === "number-of-people") {
+    else if (inputNode.id === "number-of-people") {
         validity ?
             numberOfPeopleLabel.classList.remove("invalid") :
             numberOfPeopleLabel.classList.add("invalid");
     }
     // custom tip input
-    else if (e.target.id === "custom-tip") {
+    else if (inputNode.id === "custom-tip") {
         validity ?
             customTipLabel.classList.remove("invalid"):
             customTipLabel.classList.add("invalid");
     }
-};
-const validateInput = (inputNode) => {
-    // validity for number of people input
-    if (e.target.id === "number-of-people") {
-        return /^[0-9]+$/.test(e.target.value);
-    }
-
-    // validity for bill amount and custom tip inputs
-    return /^[0-9.]+$/.test(e.target.value);
 };
 
 
@@ -61,7 +52,7 @@ const handleChange = (event) => {
     console.log("validity:", inputValidity);
 
     // Show error when invalid
-    showOrRemoveInvalidIndicator(event, inputValidity);
+    showOrRemoveInvalidInputIndicator(event.target, inputValidity);
 };
 
 
