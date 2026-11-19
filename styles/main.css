@@ -127,12 +127,13 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   content: "invalid";
   position: absolute;
   font-size: 0.75em;
-  color: red;
+  color: darkred;
   bottom: 0;
   right: 0;
 }
 .invalid .input {
-  outline: 0.125rem solid red;
+  outline: 0.125rem solid darkred;
+  color: darkred;
 }
 
 .select-tip {

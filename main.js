@@ -12,6 +12,7 @@
 
 // ## DOM NODE REFERENCES
 const billLabel = document.getElementById("bill-label");
+const numberOfPeopleLabel = document.getElementById("number-of-people-label");
 const bill = document.getElementById("bill");
 const numberOfPeople = document.getElementById("number-of-people")
 
@@ -23,6 +24,12 @@ const showOrRemoveInvalidIndicator = (e, validity) => {
         validity ?
             billLabel.classList.remove("invalid") :
             billLabel.classList.add("invalid");
+    }
+    // number of people input
+    else if (e.target.id === "number-of-people") {
+        validity ?
+            numberOfPeopleLabel.classList.remove("invalid") :
+            numberOfPeopleLabel.classList.add("invalid");
     }
 };
 const isInputValid = (e) => {
