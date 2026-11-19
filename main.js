@@ -29,7 +29,7 @@ const showOrRemoveInvalidInputIndicator = (inputNode, validity) => {
     }
     // number of people input
     else if (inputNode.id === "number-of-people") {
-        validity ?
+        validity && inputNode.valueAsNumber%1===0 ?
             numberOfPeopleLabel.classList.remove("invalid") :
             numberOfPeopleLabel.classList.add("invalid");
     }
@@ -44,7 +44,7 @@ const showOrRemoveInvalidInputIndicator = (inputNode, validity) => {
 
 // ## EVENT HANDLERS
 // Collect numeric input
-const handleChange = (event) => {
+const handleInput = (event) => {
     console.log(event.target.id, typeof event.target.valueAsNumber, event.target.value);
 
     // -----    2. VALIDATE INPUTS
@@ -58,6 +58,6 @@ const handleChange = (event) => {
 
 // -----     1. WAIT FOR USER INPUTS
 // Bill amount <input #bill>
-bill.addEventListener("input", handleChange);
-numberOfPeople.addEventListener("input", handleChange);
-customTip.addEventListener("input", handleChange);
+bill.addEventListener("input", handleInput);
+numberOfPeople.addEventListener("input", handleInput);
+customTip.addEventListener("input", handleInput);
