@@ -13,6 +13,7 @@
 // ## DOM NODE REFERENCES
 const billLabel = document.getElementById("bill-label");
 const numberOfPeopleLabel = document.getElementById("number-of-people-label");
+const customTipLabel = document.getElementById("custom-tip-label");
 const bill = document.getElementById("bill");
 const numberOfPeople = document.getElementById("number-of-people")
 const customTip = document.getElementById("custom-tip");
@@ -32,7 +33,12 @@ const showOrRemoveInvalidIndicator = (e, validity) => {
             numberOfPeopleLabel.classList.remove("invalid") :
             numberOfPeopleLabel.classList.add("invalid");
     }
-
+    // custom tip input
+    else if (e.target.id === "custom-tip") {
+        validity ?
+            customTipLabel.classList.remove("invalid"):
+            customTipLabel.classList.add("invalid");
+    }
 };
 const isInputValid = (e) => {
     // validity for number of people input

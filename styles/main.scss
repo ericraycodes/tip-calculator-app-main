@@ -207,6 +207,9 @@ input[type="number"] {
             background-color: $Grey-50;
             outline: 0.125rem solid $Green-400;
         }
+        &.invalid {
+            outline: 0.125rem solid darkred;
+        }
     }
     .custom-tip-input {
         box-sizing: border-box;
