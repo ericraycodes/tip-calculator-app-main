@@ -40,7 +40,7 @@ const showOrRemoveInvalidIndicator = (e, validity) => {
             customTipLabel.classList.add("invalid");
     }
 };
-const isInputValid = (e) => {
+const validateInput = (inputNode) => {
     // validity for number of people input
     if (e.target.id === "number-of-people") {
         return /^[0-9]+$/.test(e.target.value);
@@ -54,10 +54,10 @@ const isInputValid = (e) => {
 // ## EVENT HANDLERS
 // Collect numeric input
 const handleChange = (event) => {
-    console.log(event.target.id, typeof event.target.value, event.target.value);
+    console.log(event.target.id, typeof event.target.valueAsNumber, event.target.value);
 
     // -----    2. VALIDATE INPUTS
-    const inputValidity = isInputValid(event);
+    const inputValidity = event.target.valueAsNumber >= 0;
     console.log("validity:", inputValidity);
 
     // Show error when invalid
