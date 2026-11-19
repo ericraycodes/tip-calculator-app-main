@@ -18,6 +18,9 @@ const bill = document.getElementById("bill");
 const numberOfPeople = document.getElementById("number-of-people")
 const customTip = document.getElementById("custom-tip");
 const tipSelection = document.getElementById("tip-selection");
+const customTipRadio = document.getElementById("custom-tip-radio");
+
+const radioButtons = document.querySelectorAll("input[type='radio']");
 
 
 // Helper functions
@@ -44,6 +47,10 @@ const showOrRemoveInvalidInputIndicator = (inputNode, validity) => {
 
 
 // ## EVENT HANDLERS
+const handleClick = () => {
+    console.log("clicked custom");
+    customTipRadio.checked = true;
+};
 // Collect user-selected tip
 const handleChange = (event) => {
     console.log(event.target, event.target.checked);
@@ -69,3 +76,4 @@ bill.addEventListener("input", handleInput);
 numberOfPeople.addEventListener("input", handleInput);
 customTip.addEventListener("input", handleInput);
 tipSelection.addEventListener("change", handleChange);
+customTipLabel.addEventListener("click", handleClick);
