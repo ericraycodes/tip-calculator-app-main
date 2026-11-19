@@ -15,6 +15,7 @@ const billLabel = document.getElementById("bill-label");
 const numberOfPeopleLabel = document.getElementById("number-of-people-label");
 const bill = document.getElementById("bill");
 const numberOfPeople = document.getElementById("number-of-people")
+const customTip = document.getElementById("custom-tip");
 
 
 // Helper functions
@@ -31,6 +32,7 @@ const showOrRemoveInvalidIndicator = (e, validity) => {
             numberOfPeopleLabel.classList.remove("invalid") :
             numberOfPeopleLabel.classList.add("invalid");
     }
+
 };
 const isInputValid = (e) => {
     // validity for number of people input
@@ -38,7 +40,7 @@ const isInputValid = (e) => {
         return /^[0-9]+$/.test(e.target.value);
     }
 
-    // validity for bill amount
+    // validity for bill amount and custom tip inputs
     return /^[0-9.]+$/.test(e.target.value);
 };
 
@@ -61,3 +63,4 @@ const handleChange = (event) => {
 // Bill amount <input #bill>
 bill.addEventListener("input", handleChange);
 numberOfPeople.addEventListener("input", handleChange);
+customTip.addEventListener("input", handleChange);
