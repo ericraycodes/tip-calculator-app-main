@@ -21,8 +21,18 @@ const validateNumericValue = (id, value) => {
 
     // Show or remove indicators
     const indicatorNode = document.getElementById(id + "-label");
-    if (isValid) indicatorNode.classList.remove("invalid");
-    else indicatorNode.classList.add("invalid");
+    if (value > 0) {
+        indicatorNode.classList.remove("zero");
+        indicatorNode.classList.remove("invalid");
+    }
+    else if (value === 0) {
+        indicatorNode.classList.add("zero");
+        indicatorNode.classList.remove("invalid");
+    }
+    else {
+        indicatorNode.classList.remove("zero");
+        indicatorNode.classList.add("invalid");
+    }
 }
 
 
@@ -32,7 +42,7 @@ function handleNumberInput (event) {
     const numericValue = event.target.valueAsNumber;
     console.log("number-input:", event.target.id, event.target.value, numericValue);
 
-    // -----    2-3. Input validity
+    // -----    2-3. Input validity and indication
     validateNumericValue(event.target.id, numericValue);
 }
 

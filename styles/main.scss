@@ -146,7 +146,22 @@ input[type="number"] {
         @include typography(null, $Grey-400, right);
     }
 }
-// invalid input style
+// zero input indicator
+.zero {
+    .label::after {
+        content: "can't be zero";
+        position: absolute;
+        font-size: 0.75em;
+        color: orange;
+        bottom: 0;
+        right: 0;
+    }
+    .input {
+        outline: 0.125rem solid orange;
+        color: orange;
+    }
+}
+// invalid input indicator
 .invalid {
     .label::after {
         content: "invalid";

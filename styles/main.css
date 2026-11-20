@@ -123,6 +123,19 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   text-align: right;
 }
 
+.zero .label::after {
+  content: "can't be zero";
+  position: absolute;
+  font-size: 0.75em;
+  color: orange;
+  bottom: 0;
+  right: 0;
+}
+.zero .input {
+  outline: 0.125rem solid orange;
+  color: orange;
+}
+
 .invalid .label::after {
   content: "invalid";
   position: absolute;
