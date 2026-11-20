@@ -15,10 +15,7 @@ const numberOfPeopleInput = document.getElementById("number-of-people-input");
 
 
 // ##   HELPER FUNCTIONS
-const validateNumericValue = (id, value) => {
-    // validate bill amount inputs
-    const isValid = value > 0;
-
+const validateNumericValue = (id, valueTypeString, value) => {
     // Show or remove indicators
     const indicatorNode = document.getElementById(id + "-label");
     if (value > 0) {
@@ -38,12 +35,14 @@ const validateNumericValue = (id, value) => {
 
 // ##   EVENT HANDLERS
 function handleNumberInput (event) {
-    // -----    1. Collect input numeric value
+    // -----    1. Collect input
+    const inputId = event.target.id;
+    const stringValue = event.target.value;
     const numericValue = event.target.valueAsNumber;
-    console.log("number-input:", event.target.id, event.target.value, numericValue);
+    console.log("number-input:", inputId, stringValue, numericValue);
 
     // -----    2-3. Input validity and indication
-    validateNumericValue(event.target.id, numericValue);
+    validateNumericValue(inputId, stringValue, numericValue);
 }
 
 
