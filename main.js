@@ -14,11 +14,26 @@ const billInput = document.getElementById("bill-input");
 const numberOfPeopleInput = document.getElementById("number-of-people-input");
 
 
+// ##   HELPER FUNCTIONS
+const validateNumericValue = (id, value) => {
+    // validate bill amount inputs
+    const isValid = value > 0;
+
+    // Show or remove indicators
+    const indicatorNode = document.getElementById(id + "-label");
+    if (isValid) indicatorNode.classList.remove("invalid");
+    else indicatorNode.classList.add("invalid");
+}
+
+
 // ##   EVENT HANDLERS
 function handleNumberInput (event) {
     // -----    1. Collect input numeric value
     const numericValue = event.target.valueAsNumber;
     console.log("number-input:", event.target.id, event.target.value, numericValue);
+
+    // -----    2-3. Input validity
+    validateNumericValue(event.target.id, numericValue);
 }
 
 
