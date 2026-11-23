@@ -15,17 +15,31 @@ const numberOfPeopleInput = document.getElementById("number-of-people-input");
 
 
 // ##   HELPER FUNCTIONS
-const validateNumericValue = (id, valueTypeString, value) => {
+const indicateInputValidity = (id, value) => {
+    /**
+     * Numeric values for calculation are positive values.
+     * Zero is not acceptable for calculation.
+     * 
+     * INPUT CASES:
+     *  -   Positive value (greater than zero)
+     *  -   0 (zero)
+     *  -   Negative value (lesser than zero)
+     *  -   With decimal value
+     *  -   NaN
+     */
     // Show or remove indicators
     const indicatorNode = document.getElementById(id + "-label");
+    // when positive value
     if (value > 0) {
         indicatorNode.classList.remove("zero");
         indicatorNode.classList.remove("invalid");
     }
+    // when zero
     else if (value === 0) {
         indicatorNode.classList.add("zero");
         indicatorNode.classList.remove("invalid");
-    }
+    }    
+    // when negative value or 'not-a-number'
     else {
         indicatorNode.classList.remove("zero");
         indicatorNode.classList.add("invalid");
@@ -39,10 +53,10 @@ function handleNumberInput (event) {
     const inputId = event.target.id;
     const stringValue = event.target.value;
     const numericValue = event.target.valueAsNumber;
-    console.log("number-input:", inputId, stringValue, numericValue);
+    console.log("handle-input:", inputId, stringValue, numericValue);
 
-    // -----    2-3. Input validity and indication
-    validateNumericValue(inputId, stringValue, numericValue);
+    // -----    2. Input validity and indication
+    indicateInputValidity(inputId, numericValue);
 }
 
 
