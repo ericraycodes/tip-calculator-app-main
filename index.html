@@ -38,7 +38,14 @@
         <section class="input-controls">
           <label id="bill-input-label" class="input-number">
             <span class="label bill">Bill</span>
-            <input id="bill-input" class="input" type="number" placeholder="0" />
+            <input 
+              id="bill-input" 
+              class="input" 
+              type="text" 
+              inputmode="decimal"
+              pattern="[0-9]*.?[0-9]*"
+              placeholder="0" 
+            />
           </label>
 
           <fieldset id="tip-selection" class="select-tip">
