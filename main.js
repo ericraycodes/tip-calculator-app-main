@@ -15,7 +15,7 @@ const numberOfPeopleInput = document.getElementById("number-of-people-input");
 
 
 // ##   HELPER FUNCTIONS
-const indicateInputValidity = (id, value) => {
+const indicateInputValidity = (id, value, isBadInput) => {
     /**
      * Numeric values for calculation are positive values.
      * Zero is not acceptable for calculation.
@@ -29,8 +29,8 @@ const indicateInputValidity = (id, value) => {
      */
     // Show or remove indicators
     const indicatorNode = document.getElementById(id + "-label");
-    // when positive value
-    if (value > 0) {
+    // when positive value, or empty input field
+    if (value>0 || (!isBadInput && Number.isNaN(value))) {
         indicatorNode.classList.remove("zero");
         indicatorNode.classList.remove("invalid");
     }
@@ -38,7 +38,7 @@ const indicateInputValidity = (id, value) => {
     else if (value === 0) {
         indicatorNode.classList.add("zero");
         indicatorNode.classList.remove("invalid");
-    }    
+    }
     // when negative value or 'not-a-number'
     else {
         indicatorNode.classList.remove("zero");
@@ -51,14 +51,15 @@ const indicateInputValidity = (id, value) => {
 function handleNumberInput (event) {
     // -----    1. Collect input
     const id = event.target.id;
-    const stringValue = event.target.value;
     const value = event.target.valueAsNumber;
-    console.log("handle-input:", id, stringValue, value);
+    const isBadInput = event.target.validity.badInput;
+    console.log("handle-input:", id, isBadInput, value);
 
     // -----    2. Input validity and indication
-    indicateInputValidity(id, value);
+    indicateInputValidity(id, value, isBadInput);
 }
 
 
 // ##   EVENT LISTENERS
 billInput.addEventListener("input", handleNumberInput);
+numberOfPeopleInput.addEventListener("input", handleNumberInput);
