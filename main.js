@@ -9,6 +9,7 @@
 
 
 // ##   DOM NODES
+const billInput = document.getElementById("bill-input");
 const numberOfPeopleInput = document.getElementById("number-of-people-input");
 
 
@@ -44,4 +45,5 @@ function handleNumberInput (event) {
 
 
 // ##   EVENT LISTENERS
+billInput.addEventListener("input", handleNumberInput);
 numberOfPeopleInput.addEventListener("input", handleNumberInput);
