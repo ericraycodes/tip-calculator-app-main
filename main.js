@@ -50,13 +50,13 @@ const indicateInputValidity = (id, value) => {
 // ##   EVENT HANDLERS
 function handleNumberInput (event) {
     // -----    1. Collect input
-    const inputId = event.target.id;
+    const id = event.target.id;
     const stringValue = event.target.value;
-    const numericValue = event.target.valueAsNumber;
-    console.log("handle-input:", inputId, stringValue, numericValue);
+    const value = event.target.valueAsNumber;
+    console.log("handle-input:", id, stringValue, value);
 
     // -----    2. Input validity and indication
-    indicateInputValidity(inputId, numericValue);
+    indicateInputValidity(id, value);
 }
 
 
