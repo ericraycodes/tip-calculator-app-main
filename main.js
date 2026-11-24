@@ -10,6 +10,7 @@
 
 // ##   DOM NODES
 const billInput = document.getElementById("bill-input");
+const customTipInput = document.getElementById("custom-tip-input");
 const numberOfPeopleInput = document.getElementById("number-of-people-input");
 
 
@@ -19,8 +20,16 @@ const indicateInputValidity = (id, value, validity) => {
     console.log("zero?", Number(value));
     // when input is valid
     if (validity) {
-        if (value!=="" && Number(value)===0) indicatorNode.classList.add("zero");
-        else indicatorNode.classList.remove("zero");
+        if (
+            value!=="" && 
+            Number(value)===0 && 
+            id!=="custom-tip-input"
+        ) {
+            indicatorNode.classList.add("zero");
+        }
+        else {
+            indicatorNode.classList.remove("zero");
+        }
         indicatorNode.classList.remove("invalid");
     }
     // when input is invalid
@@ -46,4 +55,5 @@ function handleNumberInput (event) {
 
 // ##   EVENT LISTENERS
 billInput.addEventListener("input", handleNumberInput);
+customTipInput.addEventListener("input", handleNumberInput);
 numberOfPeopleInput.addEventListener("input", handleNumberInput);
