@@ -10,9 +10,9 @@
 
 // ##   INPUT STORE
 const INPUT = {
-    "bill-input": 0,
-    "custom-tip-input": 0,
-    "number-of-people-input": 0
+    billAmount: 0,
+    tipPercentage: 0,
+    numberOfPayors: 0
 }
 
 
