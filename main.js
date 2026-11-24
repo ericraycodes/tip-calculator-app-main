@@ -3,16 +3,16 @@
  * 
  *  1.  Collect every user input-interaction from input controls.
  *  2.  Indicate when inputs are not valid for calculation.
- *  3.  Calculate when valid inputs are available.
+ *  3.  Store valid inputs for calculation.
  *  4.  Show calculation results when calculation can be successful.
  */
 
 
 // ##   INPUT STORE
 const INPUT = {
-    billAmount: 0,
-    tipPercentage: 0,
-    numberOfPayor: 0
+    "bill-input": 0,
+    "custom-tip-input": 0,
+    "number-of-people-input": 0
 }
 
 
