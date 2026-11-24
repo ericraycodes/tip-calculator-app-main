@@ -21,6 +21,7 @@ const billInput = document.getElementById("bill-input");
 const customTipInput = document.getElementById("custom-tip-input");
 const numberOfPeopleInput = document.getElementById("number-of-people-input");
 const customTipRadioButton = document.getElementById("custom-tip-radio");
+const tipSelection = document.getElementById("tip-selection");
 
 
 // ##   HELPER FUNCTIONS
@@ -62,7 +63,7 @@ const storeValidInputs = (id, value, validity) => {
             break;
         default: break;
     }
-    
+
     // update store
     INPUT[property] = validity ? Number(value): 0;
     console.log("update store:", INPUT);
@@ -72,13 +73,13 @@ const storeValidInputs = (id, value, validity) => {
 // ##   EVENT HANDLERS
 function handleNumberInput (event) {
     // ---  1. COLLECT INPUT
-    const id = event.target.id;
+    const id = event.target.id || event.target.name;
     const value = event.target.value;
     const validity = event.target.checkValidity();
     console.log("INPUT:", id, value, validity);
 
     // ---  2. INDICATE VALIDITY
-    indicateInputValidity(id, value, validity);
+    if (id !== "tip") indicateInputValidity(id, value, validity);
 
     // ---  3. UPDATE INPUT
     storeValidInputs(id, value, validity);
@@ -94,3 +95,4 @@ billInput.addEventListener("input", handleNumberInput);
 customTipInput.addEventListener("input", handleNumberInput);
 numberOfPeopleInput.addEventListener("input", handleNumberInput);
 customTipInput.addEventListener("click", handleCustomInputClick);
+tipSelection.addEventListener("change", handleNumberInput);
