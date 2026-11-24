@@ -44,6 +44,22 @@ Users should be able to:
 
 ### What I learned
 
+I learned to use `inputmode="numeric"` to <input> elements. This allows numeric touch keypads to devices. Adding the `pattern` attribute allows me to check input validity with `.checkValidity()` in JavaScript.
+```html
+<input 
+    type="text" 
+    inputmode="decimal"
+    pattern="[0-9]*[.]?[0-9]*"
+    placeholder="0" 
+/>
+<input 
+    type="text" 
+    inputmode="numeric" 
+    pattern="[0-9]*" 
+    placeholder="0" 
+/>
+```
+
 ### Continued development
 
 - Mobile-First Design
