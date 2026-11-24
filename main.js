@@ -12,6 +12,7 @@
 const billInput = document.getElementById("bill-input");
 const customTipInput = document.getElementById("custom-tip-input");
 const numberOfPeopleInput = document.getElementById("number-of-people-input");
+const customTipRadioButton = document.getElementById("custom-tip-radio");
 
 
 // ##   HELPER FUNCTIONS
@@ -51,9 +52,14 @@ function handleNumberInput (event) {
     // ---  2. INDICATE VALIDITY
     indicateInputValidity(id, value, validity);
 }
+function handleCustomInputClick () {
+    console.log("custom input clicked");
+    customTipRadioButton.checked = true;
+}
 
 
 // ##   EVENT LISTENERS
 billInput.addEventListener("input", handleNumberInput);
 customTipInput.addEventListener("input", handleNumberInput);
 numberOfPeopleInput.addEventListener("input", handleNumberInput);
+customTipInput.addEventListener("click", handleCustomInputClick);
