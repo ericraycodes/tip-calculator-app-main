@@ -8,6 +8,14 @@
  */
 
 
+// ##   INPUT STORE
+const INPUT = {
+    billAmount: 0,
+    tipPercentage: 0,
+    numberOfPayor: 0
+}
+
+
 // ##   DOM NODES
 const billInput = document.getElementById("bill-input");
 const customTipInput = document.getElementById("custom-tip-input");
