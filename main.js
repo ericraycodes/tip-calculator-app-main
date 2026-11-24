@@ -78,6 +78,9 @@ function handleNumberInput (event) {
     const validity = event.target.checkValidity();
     console.log("INPUT:", id, value, validity);
 
+    // automatic checked when custom input is filled out
+    if (id === "custom-tip-input") customTipRadioButton.checked = true;
+
     // ---  2. INDICATE VALIDITY
     if (id !== "tip") indicateInputValidity(id, value, validity);
 
@@ -94,5 +97,5 @@ function handleCustomInputClick () {
 billInput.addEventListener("input", handleNumberInput);
 customTipInput.addEventListener("input", handleNumberInput);
 numberOfPeopleInput.addEventListener("input", handleNumberInput);
-customTipInput.addEventListener("click", handleCustomInputClick);
+customTipInput.addEventListener("click", handleNumberInput);
 tipSelection.addEventListener("change", handleNumberInput);
