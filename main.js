@@ -47,9 +47,24 @@ const indicateInputValidity = (id, value, validity) => {
         indicatorNode.classList.add("invalid");
     }
 };
-const storeValidInputs = (id, value) => {
-    const numericValue = Number(value);
-    INPUT[id] = numericValue ? numericValue: 0;
+const storeValidInputs = (id, value, validity) => {
+    // which store property is updated
+    let property;
+    switch (true) {
+        case /bill/.test(id):
+            property = "billAmount";
+            break;
+        case /tip/.test(id):
+            property = "tipPercentage";
+            break;
+        case /people/.test(id):
+            property = "numberOfPayors";
+            break;
+        default: break;
+    }
+    
+    // update store
+    INPUT[property] = validity ? Number(value): 0;
     console.log("update store:", INPUT);
 };
 
