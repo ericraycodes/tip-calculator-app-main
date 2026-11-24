@@ -47,6 +47,11 @@ const indicateInputValidity = (id, value, validity) => {
         indicatorNode.classList.add("invalid");
     }
 };
+const storeValidInputs = (id, value) => {
+    const numericValue = Number(value);
+    INPUT[id] = numericValue ? numericValue: 0;
+    console.log("update store:", INPUT);
+};
 
 
 // ##   EVENT HANDLERS
@@ -59,6 +64,9 @@ function handleNumberInput (event) {
 
     // ---  2. INDICATE VALIDITY
     indicateInputValidity(id, value, validity);
+
+    // ---  3. UPDATE INPUT
+    storeValidInputs(id, value, validity);
 }
 function handleCustomInputClick () {
     console.log("custom input clicked");
