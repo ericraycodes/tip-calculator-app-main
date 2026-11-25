@@ -68,6 +68,26 @@ const storeValidInputs = (id, value, validity) => {
     INPUT[property] = validity ? Number(value): 0;
     console.log("update store:", INPUT);
 };
+const finalizeResult = (value) => {
+    console.log("finalize:", typeof value, value);
+    // when values are extremes or zero
+    if (value===0 || Number.isNaN(value) || value===Infinity) return "0.00";
+    // real numeric values round off to the hundredths
+    return Math.round(value * 100) / 100;
+}
+const splitBill = (store) => {
+    const splittedBill = store.billAmount / store.numberOfPayors;
+    console.log("bill pax:", splittedBill);
+    const splittedTip = splittedBill * store.tipPercentage/100;
+    console.log("tip pax:", splittedTip);
+    const splittedTippedPayment = splittedBill + splittedTip;
+    console.log("tipped bill pax:", splittedTippedPayment);
+    // return two final results
+    return [
+        finalizeResult(splittedTip),
+        finalizeResult(splittedTippedPayment)
+    ];
+};
 
 
 // ##   EVENT HANDLERS
@@ -86,10 +106,10 @@ function handleNumberInput (event) {
 
     // ---  3. UPDATE INPUT
     storeValidInputs(id, value, validity);
-}
-function handleCustomInputClick () {
-    console.log("custom input clicked");
-    customTipRadioButton.checked = true;
+
+    // ---  CALCULATE
+    const [tipAmountPerPerson, totalAmountPerPerson] = splitBill(INPUT);
+    console.log("result:", tipAmountPerPerson, totalAmountPerPerson);
 }
 
 
