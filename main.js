@@ -22,6 +22,8 @@ const customTipInput = document.getElementById("custom-tip-input");
 const numberOfPeopleInput = document.getElementById("number-of-people-input");
 const customTipRadioButton = document.getElementById("custom-tip-radio");
 const tipSelection = document.getElementById("tip-selection");
+const tipAmountPerPersonOutput = document.getElementById("tip-amount-per-person-output");
+const totalAmountPerPersonOutput = document.getElementById("total-amount-per-person-output");
 
 
 // ##   HELPER FUNCTIONS
@@ -88,6 +90,11 @@ const splitBill = (store) => {
         finalizeResult(splittedTippedPayment)
     ];
 };
+const showResult = (results, outputNodes) => {
+    for (let i=0; i<=1; i++) {
+        outputNodes[i].textContent = results[i];
+    }
+};
 
 
 // ##   EVENT HANDLERS
@@ -110,6 +117,12 @@ function handleNumberInput (event) {
     // ---  CALCULATE
     const [tipAmountPerPerson, totalAmountPerPerson] = splitBill(INPUT);
     console.log("result:", tipAmountPerPerson, totalAmountPerPerson);
+
+    // ---  SHOW RESULTS
+    showResult(
+        [tipAmountPerPerson, totalAmountPerPerson],
+        [tipAmountPerPersonOutput, totalAmountPerPersonOutput]
+    );
 }
 
 
