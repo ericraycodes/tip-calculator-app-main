@@ -24,6 +24,7 @@ const customTipRadioButton = document.getElementById("custom-tip-radio");
 const tipSelection = document.getElementById("tip-selection");
 const tipAmountPerPersonOutput = document.getElementById("tip-amount-per-person-output");
 const totalAmountPerPersonOutput = document.getElementById("total-amount-per-person-output");
+const resetButton = document.getElementById("reset-button");
 
 
 // ##   HELPER FUNCTIONS
@@ -124,6 +125,25 @@ function handleNumberInput (event) {
         [tipAmountPerPersonOutput, totalAmountPerPersonOutput]
     );
 }
+function handleReset () {
+    // numeric inputs
+    [billInput, customTipInput, numberOfPeopleInput].forEach(node => {
+        // empty fields
+        node.value = "";
+        // reset validity indicators
+        indicateInputValidity(node.id, node.value, node.validity);
+    });
+    // tip selection
+    document.querySelectorAll("input[type='radio']").forEach(node => {
+        // nothing is selected
+        node.checked = false;
+    });
+    // calculation result
+    [tipAmountPerPersonOutput, totalAmountPerPersonOutput].forEach(node => {
+        // initial placeholder zero amount
+        node.textContent = "0.00";
+    });
+}
 
 
 // ##   EVENT LISTENERS
@@ -132,3 +152,4 @@ customTipInput.addEventListener("input", handleNumberInput);
 numberOfPeopleInput.addEventListener("input", handleNumberInput);
 customTipInput.addEventListener("click", handleNumberInput);
 tipSelection.addEventListener("change", handleNumberInput);
+resetButton.addEventListener("click", handleReset);
